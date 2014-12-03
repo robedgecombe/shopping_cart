@@ -1,0 +1,1653 @@
+  [1m[36m (45.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.0ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateBooks (20141202033909)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (37.3ms)[0m  [1mCREATE TABLE "books" ("id" serial primary key, "title" character varying(255), "author" character varying(255), "description" text, "price" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (15.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141202033909"]]
+  [1m[36m (15.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mBook Load (0.5ms)[0m  SELECT "books".* FROM "books"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (16.0ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "written by some guy"], ["created_at", "2014-12-02 03:43:09.116696"], ["description", "you can read it"], ["price", 0], ["title", "The book is called 0"], ["updated_at", "2014-12-02 03:43:09.116696"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "written by some guy"], ["created_at", "2014-12-02 03:43:09.153058"], ["description", "you can read it"], ["price", 1], ["title", "The book is called 1"], ["updated_at", "2014-12-02 03:43:09.153058"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "written by some guy"], ["created_at", "2014-12-02 03:43:09.155512"], ["description", "you can read it"], ["price", 2], ["title", "The book is called 2"], ["updated_at", "2014-12-02 03:43:09.155512"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "written by some guy"], ["created_at", "2014-12-02 03:43:09.157322"], ["description", "you can read it"], ["price", 3], ["title", "The book is called 3"], ["updated_at", "2014-12-02 03:43:09.157322"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "written by some guy"], ["created_at", "2014-12-02 03:43:09.158930"], ["description", "you can read it"], ["price", 4], ["title", "The book is called 4"], ["updated_at", "2014-12-02 03:43:09.158930"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "written by some guy"], ["created_at", "2014-12-02 03:43:09.160615"], ["description", "you can read it"], ["price", 5], ["title", "The book is called 5"], ["updated_at", "2014-12-02 03:43:09.160615"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "written by some guy"], ["created_at", "2014-12-02 03:43:09.162179"], ["description", "you can read it"], ["price", 6], ["title", "The book is called 6"], ["updated_at", "2014-12-02 03:43:09.162179"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "written by some guy"], ["created_at", "2014-12-02 03:43:09.163667"], ["description", "you can read it"], ["price", 7], ["title", "The book is called 7"], ["updated_at", "2014-12-02 03:43:09.163667"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "written by some guy"], ["created_at", "2014-12-02 03:43:09.165030"], ["description", "you can read it"], ["price", 8], ["title", "The book is called 8"], ["updated_at", "2014-12-02 03:43:09.165030"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "written by some guy"], ["created_at", "2014-12-02 03:43:09.166441"], ["description", "you can read it"], ["price", 9], ["title", "The book is called 9"], ["updated_at", "2014-12-02 03:43:09.166441"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "written by some guy"], ["created_at", "2014-12-02 03:43:09.167893"], ["description", "you can read it"], ["price", 10], ["title", "The book is called 10"], ["updated_at", "2014-12-02 03:43:09.167893"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "written by some guy"], ["created_at", "2014-12-02 03:43:09.169301"], ["description", "you can read it"], ["price", 11], ["title", "The book is called 11"], ["updated_at", "2014-12-02 03:43:09.169301"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "written by some guy"], ["created_at", "2014-12-02 03:43:09.170742"], ["description", "you can read it"], ["price", 12], ["title", "The book is called 12"], ["updated_at", "2014-12-02 03:43:09.170742"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "written by some guy"], ["created_at", "2014-12-02 03:43:09.172151"], ["description", "you can read it"], ["price", 13], ["title", "The book is called 13"], ["updated_at", "2014-12-02 03:43:09.172151"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "written by some guy"], ["created_at", "2014-12-02 03:43:09.173622"], ["description", "you can read it"], ["price", 14], ["title", "The book is called 14"], ["updated_at", "2014-12-02 03:43:09.173622"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "written by some guy"], ["created_at", "2014-12-02 03:43:09.175022"], ["description", "you can read it"], ["price", 15], ["title", "The book is called 15"], ["updated_at", "2014-12-02 03:43:09.175022"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "written by some guy"], ["created_at", "2014-12-02 03:43:09.176472"], ["description", "you can read it"], ["price", 16], ["title", "The book is called 16"], ["updated_at", "2014-12-02 03:43:09.176472"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "written by some guy"], ["created_at", "2014-12-02 03:43:09.177896"], ["description", "you can read it"], ["price", 17], ["title", "The book is called 17"], ["updated_at", "2014-12-02 03:43:09.177896"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "written by some guy"], ["created_at", "2014-12-02 03:43:09.179209"], ["description", "you can read it"], ["price", 18], ["title", "The book is called 18"], ["updated_at", "2014-12-02 03:43:09.179209"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "written by some guy"], ["created_at", "2014-12-02 03:43:09.180498"], ["description", "you can read it"], ["price", 19], ["title", "The book is called 19"], ["updated_at", "2014-12-02 03:43:09.180498"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "written by some guy"], ["created_at", "2014-12-02 03:43:09.181753"], ["description", "you can read it"], ["price", 20], ["title", "The book is called 20"], ["updated_at", "2014-12-02 03:43:09.181753"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "written by some guy"], ["created_at", "2014-12-02 03:43:09.183001"], ["description", "you can read it"], ["price", 21], ["title", "The book is called 21"], ["updated_at", "2014-12-02 03:43:09.183001"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "written by some guy"], ["created_at", "2014-12-02 03:43:09.184244"], ["description", "you can read it"], ["price", 22], ["title", "The book is called 22"], ["updated_at", "2014-12-02 03:43:09.184244"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "written by some guy"], ["created_at", "2014-12-02 03:43:09.185464"], ["description", "you can read it"], ["price", 23], ["title", "The book is called 23"], ["updated_at", "2014-12-02 03:43:09.185464"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "written by some guy"], ["created_at", "2014-12-02 03:43:09.186784"], ["description", "you can read it"], ["price", 24], ["title", "The book is called 24"], ["updated_at", "2014-12-02 03:43:09.186784"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[36mBook Load (0.6ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books"  WHERE "books"."id" = $1 LIMIT 1  [["id", 1]]
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-02 17:28:58 +1300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  Rendered books/index.html.erb within layouts/application (10.9ms)
+Completed 500 Internal Server Error in 62ms
+
+SyntaxError (/Users/apprentice/EDA/rob/shopping_cart/app/views/books/index.html.erb:13: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/Users/apprentice/EDA/rob/shopping_cart/app/views/books/index.html.erb:16: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/apprentice/EDA/rob/shopping_cart/app/views/books/index.html.erb:18: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/books/index.html.erb:13: syntax error, unexpected keyword_end, expecting ')'
+  app/views/books/index.html.erb:16: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/books/index.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-02 17:31:33 +1300
+Processing by BooksController#index as HTML
+  Rendered books/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 3ms
+
+SyntaxError (/Users/apprentice/EDA/rob/shopping_cart/app/views/books/index.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/Users/apprentice/EDA/rob/shopping_cart/app/views/books/index.html.erb:15: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/apprentice/EDA/rob/shopping_cart/app/views/books/index.html.erb:17: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/books/index.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+  app/views/books/index.html.erb:15: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/books/index.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-02 17:31:40 +1300
+Processing by BooksController#index as HTML
+  Rendered books/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 2ms
+
+SyntaxError (/Users/apprentice/EDA/rob/shopping_cart/app/views/books/index.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/Users/apprentice/EDA/rob/shopping_cart/app/views/books/index.html.erb:15: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/apprentice/EDA/rob/shopping_cart/app/views/books/index.html.erb:17: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/books/index.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+  app/views/books/index.html.erb:15: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/books/index.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-02 17:31:46 +1300
+Processing by BooksController#index as HTML
+  Rendered books/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 3ms
+
+SyntaxError (/Users/apprentice/EDA/rob/shopping_cart/app/views/books/index.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/Users/apprentice/EDA/rob/shopping_cart/app/views/books/index.html.erb:15: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/apprentice/EDA/rob/shopping_cart/app/views/books/index.html.erb:17: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/books/index.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+  app/views/books/index.html.erb:15: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/books/index.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-02 17:32:42 +1300
+Processing by BooksController#index as HTML
+  Rendered books/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 3ms
+
+SyntaxError (/Users/apprentice/EDA/rob/shopping_cart/app/views/books/index.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/Users/apprentice/EDA/rob/shopping_cart/app/views/books/index.html.erb:15: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/apprentice/EDA/rob/shopping_cart/app/views/books/index.html.erb:17: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/books/index.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+  app/views/books/index.html.erb:15: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/books/index.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-02 17:33:08 +1300
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.7ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (13.0ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined method `name' for #<Book:0x007fbddb760ef8>):
+    3: <ul id="books">
+    4:   <% @books.each do |book| %>
+    5:   <li>
+    6:         <strong><%= book.name %></strong>
+    7:         <% simple_format(book.description) %>
+    8:         <em><%= book.price %>
+    9:     <br />
+  app/views/books/index.html.erb:6:in `block in _app_views_books_index_html_erb___390232742514371599_70226703354940'
+  app/views/books/index.html.erb:4:in `_app_views_books_index_html_erb___390232742514371599_70226703354940'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-02 17:33:33 +1300
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 668ms (Views: 666.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 17:33:34 +1300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 17:33:34 +1300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 17:33:34 +1300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 17:33:34 +1300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 17:33:34 +1300
+
+
+Started GET "/books/1" for 127.0.0.1 at 2014-12-02 17:33:58 +1300
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books"  WHERE "books"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered books/show.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 43ms
+
+ActionView::Template::Error (undefined method `name' for #<Book:0x007fbddbc5f1c0>):
+    1: <h1><%= @book.name %></h1>
+    2: <%= simple_format(@book.description) %>
+    3: <%= simple_format(@book.author) %>
+    4: <em><%= @book.price %></em>
+  app/views/books/show.html.erb:1:in `_app_views_books_show_html_erb___2836532132573388254_70226706379640'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.7ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2014-12-02 17:33:58 +1300
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT  "books".* FROM "books"  WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered books/show.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `name' for #<Book:0x007fbddbf97310>):
+    1: <h1><%= @book.name %></h1>
+    2: <%= simple_format(@book.description) %>
+    3: <%= simple_format(@book.author) %>
+    4: <em><%= @book.price %></em>
+  app/views/books/show.html.erb:1:in `_app_views_books_show_html_erb___2836532132573388254_70226708046500'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (33.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (44.8ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2014-12-02 17:34:25 +1300
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mBook Load (0.4ms)[0m  SELECT  "books".* FROM "books"  WHERE "books"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered books/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 30ms (Views: 27.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-12-02 17:34:34 +1300
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-12-02 17:34:59 +1300
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 17:34:59 +1300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 17:34:59 +1300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 17:34:59 +1300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 17:34:59 +1300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 17:34:59 +1300
+
+
+Started GET "/books" for 127.0.0.1 at 2014-12-02 17:35:44 +1300
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 76ms (Views: 74.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 17:35:45 +1300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 17:35:45 +1300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 17:35:45 +1300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 17:35:45 +1300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 17:35:45 +1300
+
+
+Started GET "/books" for 127.0.0.1 at 2014-12-02 17:35:57 +1300
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 17:35:57 +1300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 17:35:57 +1300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 17:35:57 +1300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 17:35:57 +1300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 17:35:57 +1300
+
+
+Started GET "/books" for 127.0.0.1 at 2014-12-02 17:36:06 +1300
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 30ms (Views: 28.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 17:36:06 +1300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 17:36:06 +1300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 17:36:06 +1300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 17:36:06 +1300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 17:36:06 +1300
+  [1m[36m (198.8ms)[0m  [1mDROP DATABASE IF EXISTS "shopping_cart_development"[0m
+  [1m[35m (166.5ms)[0m  DROP DATABASE IF EXISTS "shopping_cart_test"
+  [1m[36m (674.9ms)[0m  [1mCREATE DATABASE "shopping_cart_development" ENCODING = 'unicode'[0m
+  [1m[35m (248.4ms)[0m  CREATE DATABASE "shopping_cart_test" ENCODING = 'unicode'
+  [1m[36mSQL (31.8ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (22.4ms)[0m  CREATE TABLE "books" ("id" serial primary key, "title" character varying(255), "author" character varying(255), "description" text, "price" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (15.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.3ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.5ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20141202033909')
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mBook Load (1.3ms)[0m  SELECT "books".* FROM "books"
+  [1m[36m (3.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateBooks (20141202033909)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (4.3ms)[0m  [1mCREATE TABLE "books" ("id" serial primary key, "title" character varying(255), "author" character varying(255), "description" text, "price" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (16.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141202033909"]]
+  [1m[36m (14.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mBook Load (0.6ms)[0m  SELECT "books".* FROM "books"
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books"[0m
+
+
+Started GET "/books" for 127.0.0.1 at 2014-12-02 17:48:31 +1300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.5ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 158ms (Views: 136.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 17:48:31 +1300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 17:48:31 +1300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 17:48:31 +1300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 17:48:31 +1300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 17:48:31 +1300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mBook Load (0.5ms)[0m  SELECT "books".* FROM "books"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/books" for 127.0.0.1 at 2014-12-02 17:59:02 +1300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.5ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 102ms (Views: 91.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 17:59:03 +1300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 17:59:03 +1300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 17:59:03 +1300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 17:59:03 +1300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 17:59:03 +1300
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  [1m[36m (2.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.5ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateBooks (20141202033909)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.5ms)[0m  [1mCREATE TABLE "books" ("id" serial primary key, "title" character varying(255), "author" character varying(255), "description" text, "price" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141202033909"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mBook Load (0.6ms)[0m  SELECT "books".* FROM "books"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mBook Load (0.5ms)[0m  SELECT "books".* FROM "books"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Mrs. Chasity Rutherford"], ["created_at", "2014-12-02 05:04:31.086526"], ["description", "yeah awesome book"], ["price", 17], ["title", "The book is called 0"], ["updated_at", "2014-12-02 05:04:31.086526"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Golden O'Keefe Jr."], ["created_at", "2014-12-02 05:04:31.135810"], ["description", "yeah awesome book"], ["price", 15], ["title", "The book is called 1"], ["updated_at", "2014-12-02 05:04:31.135810"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Dora Smith"], ["created_at", "2014-12-02 05:04:31.138128"], ["description", "yeah awesome book"], ["price", 11], ["title", "The book is called 2"], ["updated_at", "2014-12-02 05:04:31.138128"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Pierre Ebert"], ["created_at", "2014-12-02 05:04:31.140001"], ["description", "yeah awesome book"], ["price", 18], ["title", "The book is called 3"], ["updated_at", "2014-12-02 05:04:31.140001"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Malvina Kuhic MD"], ["created_at", "2014-12-02 05:04:31.141754"], ["description", "yeah awesome book"], ["price", 11], ["title", "The book is called 4"], ["updated_at", "2014-12-02 05:04:31.141754"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Sandrine Cummerata DVM"], ["created_at", "2014-12-02 05:04:31.143702"], ["description", "yeah awesome book"], ["price", 20], ["title", "The book is called 5"], ["updated_at", "2014-12-02 05:04:31.143702"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Terence Ledner"], ["created_at", "2014-12-02 05:04:31.146513"], ["description", "yeah awesome book"], ["price", 11], ["title", "The book is called 6"], ["updated_at", "2014-12-02 05:04:31.146513"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Esta Gulgowski"], ["created_at", "2014-12-02 05:04:31.148652"], ["description", "yeah awesome book"], ["price", 16], ["title", "The book is called 7"], ["updated_at", "2014-12-02 05:04:31.148652"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Dortha Purdy"], ["created_at", "2014-12-02 05:04:31.150418"], ["description", "yeah awesome book"], ["price", 17], ["title", "The book is called 8"], ["updated_at", "2014-12-02 05:04:31.150418"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Carli Champlin"], ["created_at", "2014-12-02 05:04:31.151984"], ["description", "yeah awesome book"], ["price", 10], ["title", "The book is called 9"], ["updated_at", "2014-12-02 05:04:31.151984"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Dayne Bode"], ["created_at", "2014-12-02 05:04:31.153495"], ["description", "yeah awesome book"], ["price", 12], ["title", "The book is called 10"], ["updated_at", "2014-12-02 05:04:31.153495"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Danyka Haag"], ["created_at", "2014-12-02 05:04:31.154968"], ["description", "yeah awesome book"], ["price", 20], ["title", "The book is called 11"], ["updated_at", "2014-12-02 05:04:31.154968"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Hollie Hodkiewicz MD"], ["created_at", "2014-12-02 05:04:31.156467"], ["description", "yeah awesome book"], ["price", 20], ["title", "The book is called 12"], ["updated_at", "2014-12-02 05:04:31.156467"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Dr. Adonis Klein"], ["created_at", "2014-12-02 05:04:31.157910"], ["description", "yeah awesome book"], ["price", 19], ["title", "The book is called 13"], ["updated_at", "2014-12-02 05:04:31.157910"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Edwin Braun"], ["created_at", "2014-12-02 05:04:31.159318"], ["description", "yeah awesome book"], ["price", 19], ["title", "The book is called 14"], ["updated_at", "2014-12-02 05:04:31.159318"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Ernestine Wiegand II"], ["created_at", "2014-12-02 05:04:31.160761"], ["description", "yeah awesome book"], ["price", 11], ["title", "The book is called 15"], ["updated_at", "2014-12-02 05:04:31.160761"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Layne Mitchell V"], ["created_at", "2014-12-02 05:04:31.162145"], ["description", "yeah awesome book"], ["price", 12], ["title", "The book is called 16"], ["updated_at", "2014-12-02 05:04:31.162145"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Maurine Green"], ["created_at", "2014-12-02 05:04:31.163507"], ["description", "yeah awesome book"], ["price", 12], ["title", "The book is called 17"], ["updated_at", "2014-12-02 05:04:31.163507"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Mathew Rohan"], ["created_at", "2014-12-02 05:04:31.164860"], ["description", "yeah awesome book"], ["price", 10], ["title", "The book is called 18"], ["updated_at", "2014-12-02 05:04:31.164860"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Genesis Gottlieb"], ["created_at", "2014-12-02 05:04:31.166241"], ["description", "yeah awesome book"], ["price", 13], ["title", "The book is called 19"], ["updated_at", "2014-12-02 05:04:31.166241"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Mrs. Rebecca Dooley"], ["created_at", "2014-12-02 05:04:31.167661"], ["description", "yeah awesome book"], ["price", 15], ["title", "The book is called 20"], ["updated_at", "2014-12-02 05:04:31.167661"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Antonette Cremin"], ["created_at", "2014-12-02 05:04:31.169059"], ["description", "yeah awesome book"], ["price", 20], ["title", "The book is called 21"], ["updated_at", "2014-12-02 05:04:31.169059"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Ernie Maggio"], ["created_at", "2014-12-02 05:04:31.170859"], ["description", "yeah awesome book"], ["price", 11], ["title", "The book is called 22"], ["updated_at", "2014-12-02 05:04:31.170859"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Norval Aufderhar"], ["created_at", "2014-12-02 05:04:31.172626"], ["description", "yeah awesome book"], ["price", 16], ["title", "The book is called 23"], ["updated_at", "2014-12-02 05:04:31.172626"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Holden Schmeler"], ["created_at", "2014-12-02 05:04:31.174535"], ["description", "yeah awesome book"], ["price", 14], ["title", "The book is called 24"], ["updated_at", "2014-12-02 05:04:31.174535"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/books" for 127.0.0.1 at 2014-12-02 18:04:39 +1300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.5ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (36.8ms)
+Completed 200 OK in 130ms (Views: 117.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 18:04:40 +1300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 18:04:40 +1300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 18:04:40 +1300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 18:04:40 +1300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 18:04:40 +1300
+
+
+Started GET "/books" for 127.0.0.1 at 2014-12-02 18:05:47 +1300
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 18:05:47 +1300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 18:05:47 +1300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 18:05:47 +1300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 18:05:47 +1300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 18:05:47 +1300
+
+
+Started GET "/books" for 127.0.0.1 at 2014-12-02 18:05:50 +1300
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 29ms (Views: 28.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 18:05:50 +1300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 18:05:50 +1300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 18:05:50 +1300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 18:05:50 +1300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 18:05:50 +1300
+  [1m[36m (2.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.5ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateBooks (20141202033909)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.5ms)[0m  [1mCREATE TABLE "books" ("id" serial primary key, "title" character varying(255), "author" character varying(255), "description" text, "price" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141202033909"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mBook Load (0.5ms)[0m  SELECT "books".* FROM "books"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mBook Load (0.5ms)[0m  SELECT "books".* FROM "books"
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (17.2ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateBooks (20141202033909)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.7ms)[0m  [1mCREATE TABLE "books" ("id" serial primary key, "title" character varying(255), "author" character varying(255), "description" text, "price" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141202033909"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mBook Load (0.7ms)[0m  SELECT "books".* FROM "books"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mBook Load (0.7ms)[0m  SELECT "books".* FROM "books"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Ned Leffler II"], ["created_at", "2014-12-02 05:15:20.146660"], ["description", "yeah awesome book"], ["price", 12], ["title", "The book is called aut"], ["updated_at", "2014-12-02 05:15:20.146660"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Kiera Rice"], ["created_at", "2014-12-02 05:15:20.196463"], ["description", "yeah awesome book"], ["price", 17], ["title", "The book is called delectus"], ["updated_at", "2014-12-02 05:15:20.196463"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Rex Nitzsche"], ["created_at", "2014-12-02 05:15:20.198841"], ["description", "yeah awesome book"], ["price", 18], ["title", "The book is called consequuntur"], ["updated_at", "2014-12-02 05:15:20.198841"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Kamron Miller"], ["created_at", "2014-12-02 05:15:20.200554"], ["description", "yeah awesome book"], ["price", 20], ["title", "The book is called sunt"], ["updated_at", "2014-12-02 05:15:20.200554"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Antonina Langosh"], ["created_at", "2014-12-02 05:15:20.202160"], ["description", "yeah awesome book"], ["price", 20], ["title", "The book is called qui"], ["updated_at", "2014-12-02 05:15:20.202160"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Maybelle Wuckert"], ["created_at", "2014-12-02 05:15:20.203898"], ["description", "yeah awesome book"], ["price", 12], ["title", "The book is called quis"], ["updated_at", "2014-12-02 05:15:20.203898"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Yesenia Koepp"], ["created_at", "2014-12-02 05:15:20.205761"], ["description", "yeah awesome book"], ["price", 13], ["title", "The book is called est"], ["updated_at", "2014-12-02 05:15:20.205761"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Jimmy Hansen"], ["created_at", "2014-12-02 05:15:20.207299"], ["description", "yeah awesome book"], ["price", 16], ["title", "The book is called omnis"], ["updated_at", "2014-12-02 05:15:20.207299"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Mohammad Leannon"], ["created_at", "2014-12-02 05:15:20.208846"], ["description", "yeah awesome book"], ["price", 20], ["title", "The book is called a"], ["updated_at", "2014-12-02 05:15:20.208846"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Mrs. Watson Pacocha"], ["created_at", "2014-12-02 05:15:20.210471"], ["description", "yeah awesome book"], ["price", 15], ["title", "The book is called sint"], ["updated_at", "2014-12-02 05:15:20.210471"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Jaylan Gutkowski"], ["created_at", "2014-12-02 05:15:20.212038"], ["description", "yeah awesome book"], ["price", 15], ["title", "The book is called iste"], ["updated_at", "2014-12-02 05:15:20.212038"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Mariano Prosacco"], ["created_at", "2014-12-02 05:15:20.213591"], ["description", "yeah awesome book"], ["price", 11], ["title", "The book is called eos"], ["updated_at", "2014-12-02 05:15:20.213591"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Micheal Shanahan"], ["created_at", "2014-12-02 05:15:20.215008"], ["description", "yeah awesome book"], ["price", 19], ["title", "The book is called fuga"], ["updated_at", "2014-12-02 05:15:20.215008"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Carleton Barrows V"], ["created_at", "2014-12-02 05:15:20.216726"], ["description", "yeah awesome book"], ["price", 19], ["title", "The book is called quia"], ["updated_at", "2014-12-02 05:15:20.216726"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Dallas Bechtelar PhD"], ["created_at", "2014-12-02 05:15:20.218131"], ["description", "yeah awesome book"], ["price", 12], ["title", "The book is called nam"], ["updated_at", "2014-12-02 05:15:20.218131"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Romaine Flatley"], ["created_at", "2014-12-02 05:15:20.219479"], ["description", "yeah awesome book"], ["price", 20], ["title", "The book is called id"], ["updated_at", "2014-12-02 05:15:20.219479"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Meghan Hackett"], ["created_at", "2014-12-02 05:15:20.220844"], ["description", "yeah awesome book"], ["price", 11], ["title", "The book is called labore"], ["updated_at", "2014-12-02 05:15:20.220844"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Elijah Veum"], ["created_at", "2014-12-02 05:15:20.222227"], ["description", "yeah awesome book"], ["price", 13], ["title", "The book is called soluta"], ["updated_at", "2014-12-02 05:15:20.222227"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Loma Spinka"], ["created_at", "2014-12-02 05:15:20.223595"], ["description", "yeah awesome book"], ["price", 12], ["title", "The book is called optio"], ["updated_at", "2014-12-02 05:15:20.223595"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Freddy West DVM"], ["created_at", "2014-12-02 05:15:20.224971"], ["description", "yeah awesome book"], ["price", 15], ["title", "The book is called molestiae"], ["updated_at", "2014-12-02 05:15:20.224971"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Roel Stroman DDS"], ["created_at", "2014-12-02 05:15:20.226344"], ["description", "yeah awesome book"], ["price", 12], ["title", "The book is called nihil"], ["updated_at", "2014-12-02 05:15:20.226344"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Mr. Breanne Frami"], ["created_at", "2014-12-02 05:15:20.227813"], ["description", "yeah awesome book"], ["price", 11], ["title", "The book is called ex"], ["updated_at", "2014-12-02 05:15:20.227813"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Kaitlin Hagenes Sr."], ["created_at", "2014-12-02 05:15:20.229232"], ["description", "yeah awesome book"], ["price", 15], ["title", "The book is called nesciunt"], ["updated_at", "2014-12-02 05:15:20.229232"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Brionna Olson"], ["created_at", "2014-12-02 05:15:20.230566"], ["description", "yeah awesome book"], ["price", 11], ["title", "The book is called non"], ["updated_at", "2014-12-02 05:15:20.230566"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Brandy Powlowski Jr."], ["created_at", "2014-12-02 05:15:20.231934"], ["description", "yeah awesome book"], ["price", 15], ["title", "The book is called sit"], ["updated_at", "2014-12-02 05:15:20.231934"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[36mBook Load (0.9ms)[0m  [1mSELECT "books".* FROM "books"[0m
+
+
+Started GET "/books" for 127.0.0.1 at 2014-12-02 18:15:42 +1300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.5ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (56.5ms)
+Completed 200 OK in 150ms (Views: 137.1ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 18:15:42 +1300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 18:15:42 +1300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 18:15:42 +1300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 18:15:42 +1300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 18:15:42 +1300
+
+
+Started GET "/books" for 127.0.0.1 at 2014-12-02 18:17:17 +1300
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 18:17:17 +1300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 18:17:17 +1300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 18:17:17 +1300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 18:17:17 +1300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 18:17:17 +1300
+
+
+Started GET "/books" for 127.0.0.1 at 2014-12-02 18:17:39 +1300
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 33ms (Views: 31.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 18:17:39 +1300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 18:17:39 +1300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 18:17:39 +1300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 18:17:39 +1300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 18:17:39 +1300
+
+
+Started GET "/books" for 127.0.0.1 at 2014-12-02 18:18:04 +1300
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 18:18:04 +1300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 18:18:04 +1300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 18:18:04 +1300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 18:18:04 +1300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 18:18:04 +1300
+
+
+Started GET "/books" for 127.0.0.1 at 2014-12-02 18:18:56 +1300
+Processing by BooksController#index as HTML
+  Rendered books/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 4ms
+
+SyntaxError (/Users/apprentice/EDA/rob/shopping_cart/app/views/books/index.html.erb:6: syntax error, unexpected ')', expecting '='
+...ppend=( book.title.capitalize,);@output_buffer.safe_append='...
+...                               ^
+/Users/apprentice/EDA/rob/shopping_cart/app/views/books/index.html.erb:13: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/Users/apprentice/EDA/rob/shopping_cart/app/views/books/index.html.erb:16: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/apprentice/EDA/rob/shopping_cart/app/views/books/index.html.erb:18: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/books/index.html.erb:6: syntax error, unexpected ')', expecting '='
+  app/views/books/index.html.erb:13: syntax error, unexpected keyword_end, expecting ')'
+  app/views/books/index.html.erb:16: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/books/index.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.7ms)
+  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateBooks (20141202033909)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.6ms)[0m  [1mCREATE TABLE "books" ("id" serial primary key, "title" character varying(255), "author" character varying(255), "description" text, "price" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141202033909"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mBook Load (0.6ms)[0m  SELECT "books".* FROM "books"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Minnie Lockman III"], ["created_at", "2014-12-02 05:19:43.284608"], ["description", "yeah awesome book"], ["price", 12], ["title", "unde"], ["updated_at", "2014-12-02 05:19:43.284608"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Luna Pollich"], ["created_at", "2014-12-02 05:19:43.291506"], ["description", "yeah awesome book"], ["price", 19], ["title", "dolorum"], ["updated_at", "2014-12-02 05:19:43.291506"]]
+  [1m[35m (1.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Karlee McLaughlin"], ["created_at", "2014-12-02 05:19:43.295061"], ["description", "yeah awesome book"], ["price", 11], ["title", "beatae"], ["updated_at", "2014-12-02 05:19:43.295061"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Taylor Swift"], ["created_at", "2014-12-02 05:19:43.296981"], ["description", "yeah awesome book"], ["price", 12], ["title", "sint"], ["updated_at", "2014-12-02 05:19:43.296981"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Kayla Von"], ["created_at", "2014-12-02 05:19:43.298599"], ["description", "yeah awesome book"], ["price", 20], ["title", "amet"], ["updated_at", "2014-12-02 05:19:43.298599"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Rae Cassin"], ["created_at", "2014-12-02 05:19:43.300648"], ["description", "yeah awesome book"], ["price", 20], ["title", "nulla"], ["updated_at", "2014-12-02 05:19:43.300648"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Mohammed Lynch V"], ["created_at", "2014-12-02 05:19:43.302493"], ["description", "yeah awesome book"], ["price", 20], ["title", "vero"], ["updated_at", "2014-12-02 05:19:43.302493"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Connor Schimmel"], ["created_at", "2014-12-02 05:19:43.304123"], ["description", "yeah awesome book"], ["price", 10], ["title", "cumque"], ["updated_at", "2014-12-02 05:19:43.304123"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Charlotte Russel"], ["created_at", "2014-12-02 05:19:43.305697"], ["description", "yeah awesome book"], ["price", 18], ["title", "nulla"], ["updated_at", "2014-12-02 05:19:43.305697"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Verdie Runolfsson"], ["created_at", "2014-12-02 05:19:43.307307"], ["description", "yeah awesome book"], ["price", 11], ["title", "quis"], ["updated_at", "2014-12-02 05:19:43.307307"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Mr. Keegan Ankunding"], ["created_at", "2014-12-02 05:19:43.308968"], ["description", "yeah awesome book"], ["price", 13], ["title", "odit"], ["updated_at", "2014-12-02 05:19:43.308968"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Dr. Alessandra Russel"], ["created_at", "2014-12-02 05:19:43.310589"], ["description", "yeah awesome book"], ["price", 10], ["title", "officia"], ["updated_at", "2014-12-02 05:19:43.310589"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Lorine Glover"], ["created_at", "2014-12-02 05:19:43.312164"], ["description", "yeah awesome book"], ["price", 14], ["title", "similique"], ["updated_at", "2014-12-02 05:19:43.312164"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Magnus Brakus"], ["created_at", "2014-12-02 05:19:43.313680"], ["description", "yeah awesome book"], ["price", 17], ["title", "sint"], ["updated_at", "2014-12-02 05:19:43.313680"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Ryann Wyman"], ["created_at", "2014-12-02 05:19:43.315117"], ["description", "yeah awesome book"], ["price", 18], ["title", "cumque"], ["updated_at", "2014-12-02 05:19:43.315117"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Alfred Kiehn DDS"], ["created_at", "2014-12-02 05:19:43.316529"], ["description", "yeah awesome book"], ["price", 12], ["title", "minus"], ["updated_at", "2014-12-02 05:19:43.316529"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Elwyn Runolfsson"], ["created_at", "2014-12-02 05:19:43.317927"], ["description", "yeah awesome book"], ["price", 16], ["title", "vero"], ["updated_at", "2014-12-02 05:19:43.317927"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Eldred Botsford"], ["created_at", "2014-12-02 05:19:43.319474"], ["description", "yeah awesome book"], ["price", 12], ["title", "aliquid"], ["updated_at", "2014-12-02 05:19:43.319474"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Marjory Smith"], ["created_at", "2014-12-02 05:19:43.321060"], ["description", "yeah awesome book"], ["price", 19], ["title", "ut"], ["updated_at", "2014-12-02 05:19:43.321060"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Omari Balistreri"], ["created_at", "2014-12-02 05:19:43.322612"], ["description", "yeah awesome book"], ["price", 17], ["title", "recusandae"], ["updated_at", "2014-12-02 05:19:43.322612"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Mr. Eleanora Leffler"], ["created_at", "2014-12-02 05:19:43.324258"], ["description", "yeah awesome book"], ["price", 17], ["title", "necessitatibus"], ["updated_at", "2014-12-02 05:19:43.324258"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Dr. Wyman Prosacco"], ["created_at", "2014-12-02 05:19:43.325888"], ["description", "yeah awesome book"], ["price", 11], ["title", "odio"], ["updated_at", "2014-12-02 05:19:43.325888"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Delaney Bayer"], ["created_at", "2014-12-02 05:19:43.327489"], ["description", "yeah awesome book"], ["price", 13], ["title", "placeat"], ["updated_at", "2014-12-02 05:19:43.327489"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Miss Germaine Schiller"], ["created_at", "2014-12-02 05:19:43.329097"], ["description", "yeah awesome book"], ["price", 16], ["title", "quia"], ["updated_at", "2014-12-02 05:19:43.329097"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Dr. Kolby Monahan"], ["created_at", "2014-12-02 05:19:43.330598"], ["description", "yeah awesome book"], ["price", 11], ["title", "vitae"], ["updated_at", "2014-12-02 05:19:43.330598"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/books" for 127.0.0.1 at 2014-12-02 18:19:57 +1300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  Rendered books/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 20ms
+
+SyntaxError (/Users/apprentice/EDA/rob/shopping_cart/app/views/books/index.html.erb:6: syntax error, unexpected ')', expecting '='
+...ppend=( book.title.capitalize,);@output_buffer.safe_append='...
+...                               ^
+/Users/apprentice/EDA/rob/shopping_cart/app/views/books/index.html.erb:13: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/Users/apprentice/EDA/rob/shopping_cart/app/views/books/index.html.erb:16: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/apprentice/EDA/rob/shopping_cart/app/views/books/index.html.erb:18: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/books/index.html.erb:6: syntax error, unexpected ')', expecting '='
+  app/views/books/index.html.erb:13: syntax error, unexpected keyword_end, expecting ')'
+  app/views/books/index.html.erb:16: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/books/index.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.4ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-12-02 18:20:35 +1300
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.6ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 95ms (Views: 91.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 18:20:35 +1300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 18:20:35 +1300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 18:20:35 +1300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 18:20:35 +1300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 18:20:35 +1300
+
+
+Started GET "/books" for 127.0.0.1 at 2014-12-02 18:20:43 +1300
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 18:20:43 +1300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 18:20:43 +1300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 18:20:43 +1300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 18:20:43 +1300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 18:20:43 +1300
+
+
+Started GET "/books" for 127.0.0.1 at 2014-12-02 18:21:00 +1300
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 18:21:00 +1300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 18:21:00 +1300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 18:21:00 +1300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 18:21:00 +1300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 18:21:00 +1300
+
+
+Started GET "/books/4" for 127.0.0.1 at 2014-12-02 18:21:17 +1300
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  "books".* FROM "books"  WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered books/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-12-02 18:21:24 +1300
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-12-02 18:28:35 +1300
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 55ms (Views: 53.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 18:28:35 +1300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 18:28:35 +1300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 18:28:35 +1300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 18:28:35 +1300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 18:28:35 +1300
+
+
+Started GET "/books" for 127.0.0.1 at 2014-12-02 18:28:49 +1300
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 50ms (Views: 48.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 18:28:49 +1300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 18:28:49 +1300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 18:28:49 +1300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 18:28:49 +1300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 18:28:49 +1300
+  [1m[36m (140.7ms)[0m  [1mDROP DATABASE IF EXISTS "shopping_cart_development"[0m
+  [1m[35m (114.1ms)[0m  DROP DATABASE IF EXISTS "shopping_cart_test"
+  [1m[36m (629.2ms)[0m  [1mCREATE DATABASE "shopping_cart_development" ENCODING = 'unicode'[0m
+  [1m[35m (239.2ms)[0m  CREATE DATABASE "shopping_cart_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (23.0ms)[0m  CREATE TABLE "books" ("id" serial primary key, "title" character varying(255), "author" character varying(255), "description" text, "price" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (16.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.9ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.5ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20141202033909')
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mBook Load (15.9ms)[0m  SELECT "books".* FROM "books"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (15.7ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Stephan Mante"], ["created_at", "2014-12-02 22:04:03.051705"], ["description", "yeah awesome book"], ["price", 12], ["title", "similique"], ["updated_at", "2014-12-02 22:04:03.051705"]]
+  [1m[36m (15.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Herman Hodkiewicz"], ["created_at", "2014-12-02 22:04:03.089045"], ["description", "yeah awesome book"], ["price", 16], ["title", "magnam"], ["updated_at", "2014-12-02 22:04:03.089045"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Amaya Collins"], ["created_at", "2014-12-02 22:04:03.091698"], ["description", "yeah awesome book"], ["price", 11], ["title", "nemo"], ["updated_at", "2014-12-02 22:04:03.091698"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Velda Wilderman"], ["created_at", "2014-12-02 22:04:03.093739"], ["description", "yeah awesome book"], ["price", 16], ["title", "ex"], ["updated_at", "2014-12-02 22:04:03.093739"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Elva Harber"], ["created_at", "2014-12-02 22:04:03.095556"], ["description", "yeah awesome book"], ["price", 11], ["title", "et"], ["updated_at", "2014-12-02 22:04:03.095556"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Heather Schulist II"], ["created_at", "2014-12-02 22:04:03.097380"], ["description", "yeah awesome book"], ["price", 19], ["title", "aspernatur"], ["updated_at", "2014-12-02 22:04:03.097380"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Rosalyn Pfannerstill"], ["created_at", "2014-12-02 22:04:03.099178"], ["description", "yeah awesome book"], ["price", 14], ["title", "in"], ["updated_at", "2014-12-02 22:04:03.099178"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Clement Nolan"], ["created_at", "2014-12-02 22:04:03.100874"], ["description", "yeah awesome book"], ["price", 14], ["title", "sunt"], ["updated_at", "2014-12-02 22:04:03.100874"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Frederic Hermiston"], ["created_at", "2014-12-02 22:04:03.102452"], ["description", "yeah awesome book"], ["price", 12], ["title", "nobis"], ["updated_at", "2014-12-02 22:04:03.102452"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Floy O'Hara"], ["created_at", "2014-12-02 22:04:03.104015"], ["description", "yeah awesome book"], ["price", 14], ["title", "aut"], ["updated_at", "2014-12-02 22:04:03.104015"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Annabelle Corwin"], ["created_at", "2014-12-02 22:04:03.105550"], ["description", "yeah awesome book"], ["price", 10], ["title", "expedita"], ["updated_at", "2014-12-02 22:04:03.105550"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Carlos Schultz"], ["created_at", "2014-12-02 22:04:03.107117"], ["description", "yeah awesome book"], ["price", 10], ["title", "est"], ["updated_at", "2014-12-02 22:04:03.107117"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Brice Ebert"], ["created_at", "2014-12-02 22:04:03.108637"], ["description", "yeah awesome book"], ["price", 14], ["title", "vel"], ["updated_at", "2014-12-02 22:04:03.108637"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Waino Monahan Sr."], ["created_at", "2014-12-02 22:04:03.110222"], ["description", "yeah awesome book"], ["price", 13], ["title", "unde"], ["updated_at", "2014-12-02 22:04:03.110222"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Valentina Dickinson"], ["created_at", "2014-12-02 22:04:03.111767"], ["description", "yeah awesome book"], ["price", 19], ["title", "quia"], ["updated_at", "2014-12-02 22:04:03.111767"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Adela Rogahn"], ["created_at", "2014-12-02 22:04:03.113296"], ["description", "yeah awesome book"], ["price", 11], ["title", "unde"], ["updated_at", "2014-12-02 22:04:03.113296"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Mr. Gabriella DuBuque"], ["created_at", "2014-12-02 22:04:03.114717"], ["description", "yeah awesome book"], ["price", 17], ["title", "nulla"], ["updated_at", "2014-12-02 22:04:03.114717"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Casey Legros"], ["created_at", "2014-12-02 22:04:03.116079"], ["description", "yeah awesome book"], ["price", 17], ["title", "corporis"], ["updated_at", "2014-12-02 22:04:03.116079"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Emile Nienow"], ["created_at", "2014-12-02 22:04:03.117422"], ["description", "yeah awesome book"], ["price", 12], ["title", "dolore"], ["updated_at", "2014-12-02 22:04:03.117422"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Anderson Rath"], ["created_at", "2014-12-02 22:04:03.118752"], ["description", "yeah awesome book"], ["price", 12], ["title", "libero"], ["updated_at", "2014-12-02 22:04:03.118752"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Rosalind Dach"], ["created_at", "2014-12-02 22:04:03.120088"], ["description", "yeah awesome book"], ["price", 10], ["title", "nihil"], ["updated_at", "2014-12-02 22:04:03.120088"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Royal Kunze"], ["created_at", "2014-12-02 22:04:03.121407"], ["description", "yeah awesome book"], ["price", 20], ["title", "aut"], ["updated_at", "2014-12-02 22:04:03.121407"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Ivah Waelchi"], ["created_at", "2014-12-02 22:04:03.122709"], ["description", "yeah awesome book"], ["price", 12], ["title", "totam"], ["updated_at", "2014-12-02 22:04:03.122709"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Mateo Dietrich"], ["created_at", "2014-12-02 22:04:03.124010"], ["description", "yeah awesome book"], ["price", 13], ["title", "occaecati"], ["updated_at", "2014-12-02 22:04:03.124010"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Jason Gutkowski"], ["created_at", "2014-12-02 22:04:03.125304"], ["description", "yeah awesome book"], ["price", 13], ["title", "dolores"], ["updated_at", "2014-12-02 22:04:03.125304"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mBook Load (0.5ms)[0m  SELECT "books".* FROM "books"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "books" WHERE "books"."id" = $1  [["id", 1]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 2]]
+  [1m[35m (3.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "books" WHERE "books"."id" = $1  [["id", 3]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "books" WHERE "books"."id" = $1  [["id", 5]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "books" WHERE "books"."id" = $1  [["id", 7]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 8]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "books" WHERE "books"."id" = $1  [["id", 9]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 10]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "books" WHERE "books"."id" = $1  [["id", 11]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 12]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "books" WHERE "books"."id" = $1  [["id", 13]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 14]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "books" WHERE "books"."id" = $1  [["id", 15]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 16]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "books" WHERE "books"."id" = $1  [["id", 17]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 18]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "books" WHERE "books"."id" = $1  [["id", 19]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 20]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "books" WHERE "books"."id" = $1  [["id", 21]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 22]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "books" WHERE "books"."id" = $1  [["id", 23]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 24]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "books" WHERE "books"."id" = $1  [["id", 25]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Emily O'Kon"], ["created_at", "2014-12-02 22:04:12.049098"], ["description", "yeah awesome book"], ["price", 16], ["title", "delectus"], ["updated_at", "2014-12-02 22:04:12.049098"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Gloria Schuster"], ["created_at", "2014-12-02 22:04:12.052428"], ["description", "yeah awesome book"], ["price", 19], ["title", "enim"], ["updated_at", "2014-12-02 22:04:12.052428"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Alberta Tromp"], ["created_at", "2014-12-02 22:04:12.054033"], ["description", "yeah awesome book"], ["price", 10], ["title", "cum"], ["updated_at", "2014-12-02 22:04:12.054033"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Abdul O'Kon"], ["created_at", "2014-12-02 22:04:12.055547"], ["description", "yeah awesome book"], ["price", 13], ["title", "quo"], ["updated_at", "2014-12-02 22:04:12.055547"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Orrin Kunde"], ["created_at", "2014-12-02 22:04:12.057097"], ["description", "yeah awesome book"], ["price", 15], ["title", "modi"], ["updated_at", "2014-12-02 22:04:12.057097"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Jazmyn Hills"], ["created_at", "2014-12-02 22:04:12.058561"], ["description", "yeah awesome book"], ["price", 20], ["title", "ut"], ["updated_at", "2014-12-02 22:04:12.058561"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Deontae Luettgen"], ["created_at", "2014-12-02 22:04:12.059987"], ["description", "yeah awesome book"], ["price", 10], ["title", "consectetur"], ["updated_at", "2014-12-02 22:04:12.059987"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Gerda Champlin Jr."], ["created_at", "2014-12-02 22:04:12.061406"], ["description", "yeah awesome book"], ["price", 20], ["title", "delectus"], ["updated_at", "2014-12-02 22:04:12.061406"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Ms. Paxton Monahan"], ["created_at", "2014-12-02 22:04:12.062783"], ["description", "yeah awesome book"], ["price", 18], ["title", "nostrum"], ["updated_at", "2014-12-02 22:04:12.062783"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Whitney Turner"], ["created_at", "2014-12-02 22:04:12.064129"], ["description", "yeah awesome book"], ["price", 19], ["title", "voluptas"], ["updated_at", "2014-12-02 22:04:12.064129"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Dianna Keebler"], ["created_at", "2014-12-02 22:04:12.065462"], ["description", "yeah awesome book"], ["price", 12], ["title", "iste"], ["updated_at", "2014-12-02 22:04:12.065462"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Alba Conroy"], ["created_at", "2014-12-02 22:04:12.066780"], ["description", "yeah awesome book"], ["price", 18], ["title", "nobis"], ["updated_at", "2014-12-02 22:04:12.066780"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Mr. Marty Pouros"], ["created_at", "2014-12-02 22:04:12.068137"], ["description", "yeah awesome book"], ["price", 19], ["title", "quis"], ["updated_at", "2014-12-02 22:04:12.068137"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Kenton Kautzer II"], ["created_at", "2014-12-02 22:04:12.069463"], ["description", "yeah awesome book"], ["price", 13], ["title", "nihil"], ["updated_at", "2014-12-02 22:04:12.069463"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Mrs. Amely Donnelly"], ["created_at", "2014-12-02 22:04:12.070795"], ["description", "yeah awesome book"], ["price", 19], ["title", "qui"], ["updated_at", "2014-12-02 22:04:12.070795"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Mr. Lavern Crona"], ["created_at", "2014-12-02 22:04:12.072143"], ["description", "yeah awesome book"], ["price", 18], ["title", "blanditiis"], ["updated_at", "2014-12-02 22:04:12.072143"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Stephon Turcotte I"], ["created_at", "2014-12-02 22:04:12.073481"], ["description", "yeah awesome book"], ["price", 12], ["title", "incidunt"], ["updated_at", "2014-12-02 22:04:12.073481"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Mr. Treva Heidenreich"], ["created_at", "2014-12-02 22:04:12.074847"], ["description", "yeah awesome book"], ["price", 17], ["title", "quia"], ["updated_at", "2014-12-02 22:04:12.074847"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Ubaldo Lesch"], ["created_at", "2014-12-02 22:04:12.076171"], ["description", "yeah awesome book"], ["price", 14], ["title", "incidunt"], ["updated_at", "2014-12-02 22:04:12.076171"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Brice Steuber V"], ["created_at", "2014-12-02 22:04:12.077500"], ["description", "yeah awesome book"], ["price", 10], ["title", "asperiores"], ["updated_at", "2014-12-02 22:04:12.077500"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Maegan Kuphal"], ["created_at", "2014-12-02 22:04:12.078814"], ["description", "yeah awesome book"], ["price", 14], ["title", "nihil"], ["updated_at", "2014-12-02 22:04:12.078814"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Jany Jenkins"], ["created_at", "2014-12-02 22:04:12.080112"], ["description", "yeah awesome book"], ["price", 18], ["title", "facere"], ["updated_at", "2014-12-02 22:04:12.080112"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Sarina Bode DVM"], ["created_at", "2014-12-02 22:04:12.081448"], ["description", "yeah awesome book"], ["price", 14], ["title", "aliquam"], ["updated_at", "2014-12-02 22:04:12.081448"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Dr. Isaias Hand"], ["created_at", "2014-12-02 22:04:12.082820"], ["description", "yeah awesome book"], ["price", 12], ["title", "ex"], ["updated_at", "2014-12-02 22:04:12.082820"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Verna Wolf"], ["created_at", "2014-12-02 22:04:12.084148"], ["description", "yeah awesome book"], ["price", 16], ["title", "fugiat"], ["updated_at", "2014-12-02 22:04:12.084148"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateBooks (20141202033909)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE "books" ("id" serial primary key, "title" character varying(255), "author" character varying(255), "description" text, "price" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141202033909"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.6ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mBook Load (0.5ms)[0m  SELECT "books".* FROM "books"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Margarete Pfeffer"], ["created_at", "2014-12-02 22:04:43.750496"], ["description", "yeah awesome book"], ["price", 13], ["title", "quam"], ["updated_at", "2014-12-02 22:04:43.750496"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Winfield Cruickshank Jr."], ["created_at", "2014-12-02 22:04:43.756741"], ["description", "yeah awesome book"], ["price", 13], ["title", "voluptatum"], ["updated_at", "2014-12-02 22:04:43.756741"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Euna Kozey"], ["created_at", "2014-12-02 22:04:43.758593"], ["description", "yeah awesome book"], ["price", 12], ["title", "aut"], ["updated_at", "2014-12-02 22:04:43.758593"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Osbaldo Blanda"], ["created_at", "2014-12-02 22:04:43.760162"], ["description", "yeah awesome book"], ["price", 19], ["title", "eum"], ["updated_at", "2014-12-02 22:04:43.760162"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Shad Harber"], ["created_at", "2014-12-02 22:04:43.761692"], ["description", "yeah awesome book"], ["price", 10], ["title", "et"], ["updated_at", "2014-12-02 22:04:43.761692"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Macy Ortiz"], ["created_at", "2014-12-02 22:04:43.763128"], ["description", "yeah awesome book"], ["price", 17], ["title", "quae"], ["updated_at", "2014-12-02 22:04:43.763128"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Josiane Buckridge"], ["created_at", "2014-12-02 22:04:43.764545"], ["description", "yeah awesome book"], ["price", 15], ["title", "qui"], ["updated_at", "2014-12-02 22:04:43.764545"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Catherine Stokes"], ["created_at", "2014-12-02 22:04:43.766556"], ["description", "yeah awesome book"], ["price", 16], ["title", "nesciunt"], ["updated_at", "2014-12-02 22:04:43.766556"]]
+  [1m[35m (3.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Jeremy Ullrich"], ["created_at", "2014-12-02 22:04:43.772121"], ["description", "yeah awesome book"], ["price", 13], ["title", "vero"], ["updated_at", "2014-12-02 22:04:43.772121"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Loyal Waters"], ["created_at", "2014-12-02 22:04:43.774085"], ["description", "yeah awesome book"], ["price", 18], ["title", "nesciunt"], ["updated_at", "2014-12-02 22:04:43.774085"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Josefa Leannon DVM"], ["created_at", "2014-12-02 22:04:43.775763"], ["description", "yeah awesome book"], ["price", 17], ["title", "mollitia"], ["updated_at", "2014-12-02 22:04:43.775763"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Terrill Rogahn"], ["created_at", "2014-12-02 22:04:43.777232"], ["description", "yeah awesome book"], ["price", 16], ["title", "mollitia"], ["updated_at", "2014-12-02 22:04:43.777232"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Dr. Paul Koch"], ["created_at", "2014-12-02 22:04:43.778646"], ["description", "yeah awesome book"], ["price", 13], ["title", "rerum"], ["updated_at", "2014-12-02 22:04:43.778646"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Mrs. Carmelo Boyle"], ["created_at", "2014-12-02 22:04:43.779996"], ["description", "yeah awesome book"], ["price", 16], ["title", "aspernatur"], ["updated_at", "2014-12-02 22:04:43.779996"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Melany Bruen Jr."], ["created_at", "2014-12-02 22:04:43.781331"], ["description", "yeah awesome book"], ["price", 14], ["title", "quos"], ["updated_at", "2014-12-02 22:04:43.781331"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Carmen Pfeffer"], ["created_at", "2014-12-02 22:04:43.782776"], ["description", "yeah awesome book"], ["price", 18], ["title", "aut"], ["updated_at", "2014-12-02 22:04:43.782776"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Watson Heidenreich"], ["created_at", "2014-12-02 22:04:43.784086"], ["description", "yeah awesome book"], ["price", 10], ["title", "asperiores"], ["updated_at", "2014-12-02 22:04:43.784086"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Mr. Bruce Kozey"], ["created_at", "2014-12-02 22:04:43.785444"], ["description", "yeah awesome book"], ["price", 17], ["title", "quo"], ["updated_at", "2014-12-02 22:04:43.785444"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Vicente Hintz"], ["created_at", "2014-12-02 22:04:43.786753"], ["description", "yeah awesome book"], ["price", 17], ["title", "dolor"], ["updated_at", "2014-12-02 22:04:43.786753"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Elwin Ferry"], ["created_at", "2014-12-02 22:04:43.788085"], ["description", "yeah awesome book"], ["price", 18], ["title", "consequatur"], ["updated_at", "2014-12-02 22:04:43.788085"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Margarete Sanford MD"], ["created_at", "2014-12-02 22:04:43.789410"], ["description", "yeah awesome book"], ["price", 20], ["title", "non"], ["updated_at", "2014-12-02 22:04:43.789410"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Virgil Stokes Sr."], ["created_at", "2014-12-02 22:04:43.790753"], ["description", "yeah awesome book"], ["price", 20], ["title", "ut"], ["updated_at", "2014-12-02 22:04:43.790753"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Lorena Leffler"], ["created_at", "2014-12-02 22:04:43.792052"], ["description", "yeah awesome book"], ["price", 18], ["title", "rerum"], ["updated_at", "2014-12-02 22:04:43.792052"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Grant Kiehn"], ["created_at", "2014-12-02 22:04:43.793365"], ["description", "yeah awesome book"], ["price", 20], ["title", "reiciendis"], ["updated_at", "2014-12-02 22:04:43.793365"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Ruthe O'Hara III"], ["created_at", "2014-12-02 22:04:43.794681"], ["description", "yeah awesome book"], ["price", 16], ["title", "non"], ["updated_at", "2014-12-02 22:04:43.794681"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[36m (113.1ms)[0m  [1mDROP DATABASE IF EXISTS "shopping_cart_test"[0m
+  [1m[35m (249.7ms)[0m  CREATE DATABASE "shopping_cart_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (5.8ms)[0m  CREATE TABLE "books" ("id" serial primary key, "title" character varying(255), "author" character varying(255), "description" text, "price" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20141202033909')
+  [1m[36mBook Load (0.6ms)[0m  [1mSELECT "books".* FROM "books"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-03 11:09:33 +1300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.6ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 260ms (Views: 197.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-03 11:09:34 +1300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-03 11:09:34 +1300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-03 11:09:34 +1300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-03 11:09:34 +1300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-03 11:09:34 +1300
+
+
+Started GET "/books/2" for 127.0.0.1 at 2014-12-03 11:09:40 +1300
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  "books".* FROM "books"  WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered books/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 65ms (Views: 62.3ms | ActiveRecord: 0.5ms)
+  [1m[36m (2.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.7ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateBooks (20141202033909)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.6ms)[0m  [1mCREATE TABLE "books" ("id" serial primary key, "title" character varying(255), "author" character varying(255), "description" text, "price" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141202033909"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mBook Load (0.5ms)[0m  SELECT "books".* FROM "books"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Billy Powlowski"], ["created_at", "2014-12-02 22:47:55.329490"], ["description", "yeah awesome book"], ["price", 10], ["title", "autem"], ["updated_at", "2014-12-02 22:47:55.329490"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Emory Stokes"], ["created_at", "2014-12-02 22:47:55.336534"], ["description", "yeah awesome book"], ["price", 18], ["title", "suscipit"], ["updated_at", "2014-12-02 22:47:55.336534"]]
+  [1m[35m (1.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Dominique Predovic"], ["created_at", "2014-12-02 22:47:55.340170"], ["description", "yeah awesome book"], ["price", 13], ["title", "fugiat"], ["updated_at", "2014-12-02 22:47:55.340170"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Napoleon Bergstrom"], ["created_at", "2014-12-02 22:47:55.342138"], ["description", "yeah awesome book"], ["price", 11], ["title", "est"], ["updated_at", "2014-12-02 22:47:55.342138"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Holden Walter"], ["created_at", "2014-12-02 22:47:55.343837"], ["description", "yeah awesome book"], ["price", 10], ["title", "exercitationem"], ["updated_at", "2014-12-02 22:47:55.343837"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Nettie Grant"], ["created_at", "2014-12-02 22:47:55.346516"], ["description", "yeah awesome book"], ["price", 10], ["title", "pariatur"], ["updated_at", "2014-12-02 22:47:55.346516"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Meagan Leuschke DDS"], ["created_at", "2014-12-02 22:47:55.349049"], ["description", "yeah awesome book"], ["price", 11], ["title", "aut"], ["updated_at", "2014-12-02 22:47:55.349049"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Soledad Windler PhD"], ["created_at", "2014-12-02 22:47:55.350917"], ["description", "yeah awesome book"], ["price", 20], ["title", "deserunt"], ["updated_at", "2014-12-02 22:47:55.350917"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Dessie Kassulke"], ["created_at", "2014-12-02 22:47:55.352634"], ["description", "yeah awesome book"], ["price", 10], ["title", "ut"], ["updated_at", "2014-12-02 22:47:55.352634"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Kadin Medhurst II"], ["created_at", "2014-12-02 22:47:55.354339"], ["description", "yeah awesome book"], ["price", 15], ["title", "unde"], ["updated_at", "2014-12-02 22:47:55.354339"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Mr. Pansy Walsh"], ["created_at", "2014-12-02 22:47:55.356197"], ["description", "yeah awesome book"], ["price", 10], ["title", "reprehenderit"], ["updated_at", "2014-12-02 22:47:55.356197"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Guiseppe Dibbert"], ["created_at", "2014-12-02 22:47:55.358012"], ["description", "yeah awesome book"], ["price", 15], ["title", "facere"], ["updated_at", "2014-12-02 22:47:55.358012"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Kali Carroll"], ["created_at", "2014-12-02 22:47:55.359567"], ["description", "yeah awesome book"], ["price", 19], ["title", "cumque"], ["updated_at", "2014-12-02 22:47:55.359567"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Jayde Volkman IV"], ["created_at", "2014-12-02 22:47:55.361088"], ["description", "yeah awesome book"], ["price", 11], ["title", "nulla"], ["updated_at", "2014-12-02 22:47:55.361088"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Damaris Halvorson"], ["created_at", "2014-12-02 22:47:55.362635"], ["description", "yeah awesome book"], ["price", 13], ["title", "amet"], ["updated_at", "2014-12-02 22:47:55.362635"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Bryce Hegmann"], ["created_at", "2014-12-02 22:47:55.364166"], ["description", "yeah awesome book"], ["price", 16], ["title", "perspiciatis"], ["updated_at", "2014-12-02 22:47:55.364166"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Ms. Wava Volkman"], ["created_at", "2014-12-02 22:47:55.365750"], ["description", "yeah awesome book"], ["price", 10], ["title", "ut"], ["updated_at", "2014-12-02 22:47:55.365750"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Ubaldo Morissette III"], ["created_at", "2014-12-02 22:47:55.367311"], ["description", "yeah awesome book"], ["price", 12], ["title", "sed"], ["updated_at", "2014-12-02 22:47:55.367311"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Kendrick Leannon"], ["created_at", "2014-12-02 22:47:55.368766"], ["description", "yeah awesome book"], ["price", 11], ["title", "qui"], ["updated_at", "2014-12-02 22:47:55.368766"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Donald Langworth Jr."], ["created_at", "2014-12-02 22:47:55.370197"], ["description", "yeah awesome book"], ["price", 13], ["title", "ipsum"], ["updated_at", "2014-12-02 22:47:55.370197"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Dr. Belle Cruickshank"], ["created_at", "2014-12-02 22:47:55.371646"], ["description", "yeah awesome book"], ["price", 14], ["title", "tenetur"], ["updated_at", "2014-12-02 22:47:55.371646"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Ward Mayer"], ["created_at", "2014-12-02 22:47:55.373000"], ["description", "yeah awesome book"], ["price", 10], ["title", "quia"], ["updated_at", "2014-12-02 22:47:55.373000"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Elinore Cummings"], ["created_at", "2014-12-02 22:47:55.374378"], ["description", "yeah awesome book"], ["price", 10], ["title", "provident"], ["updated_at", "2014-12-02 22:47:55.374378"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Mrs. Libby Ruecker"], ["created_at", "2014-12-02 22:47:55.375794"], ["description", "yeah awesome book"], ["price", 10], ["title", "sapiente"], ["updated_at", "2014-12-02 22:47:55.375794"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Clara Luettgen III"], ["created_at", "2014-12-02 22:47:55.377143"], ["description", "yeah awesome book"], ["price", 19], ["title", "maxime"], ["updated_at", "2014-12-02 22:47:55.377143"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[36m (112.6ms)[0m  [1mDROP DATABASE IF EXISTS "shopping_cart_test"[0m
+  [1m[35m (250.9ms)[0m  CREATE DATABASE "shopping_cart_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (5.1ms)[0m  CREATE TABLE "books" ("id" serial primary key, "title" character varying(255), "author" character varying(255), "description" text, "price" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20141202033909')
+
+
+Started GET "/books/8" for 127.0.0.1 at 2014-12-03 16:16:52 +1300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mBook Load (0.4ms)[0m  SELECT  "books".* FROM "books"  WHERE "books"."id" = $1 LIMIT 1  [["id", 8]]
+  Rendered books/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 512ms (Views: 458.1ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/books/3" for 127.0.0.1 at 2014-12-03 16:20:50 +1300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mBook Load (0.4ms)[0m  SELECT  "books".* FROM "books"  WHERE "books"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered books/show.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 217ms (Views: 178.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-12-03 16:20:59 +1300
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books/10" for 127.0.0.1 at 2014-12-03 16:21:02 +1300
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books"  WHERE "books"."id" = $1 LIMIT 1  [["id", 10]]
+  Rendered books/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/9" for 127.0.0.1 at 2014-12-03 16:22:51 +1300
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT  "books".* FROM "books"  WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  Rendered books/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 55ms (Views: 53.2ms | ActiveRecord: 0.5ms)
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (17.1ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateBooks (20141202033909)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (20.5ms)[0m  [1mCREATE TABLE "books" ("id" serial primary key, "title" character varying(255), "author" character varying(255), "description" text, "price" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141202033909"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mBook Load (0.7ms)[0m  SELECT "books".* FROM "books"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Maxie Klein I"], ["created_at", "2014-12-03 03:49:31.857218"], ["description", "yeah awesome book"], ["price", 15], ["title", "blanditiis"], ["updated_at", "2014-12-03 03:49:31.857218"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Layne Wuckert"], ["created_at", "2014-12-03 03:49:31.862366"], ["description", "yeah awesome book"], ["price", 14], ["title", "voluptatem"], ["updated_at", "2014-12-03 03:49:31.862366"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Jazlyn Russel"], ["created_at", "2014-12-03 03:49:31.864320"], ["description", "yeah awesome book"], ["price", 20], ["title", "assumenda"], ["updated_at", "2014-12-03 03:49:31.864320"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Kay Sporer"], ["created_at", "2014-12-03 03:49:31.865988"], ["description", "yeah awesome book"], ["price", 19], ["title", "omnis"], ["updated_at", "2014-12-03 03:49:31.865988"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Lula Hammes"], ["created_at", "2014-12-03 03:49:31.867573"], ["description", "yeah awesome book"], ["price", 15], ["title", "quia"], ["updated_at", "2014-12-03 03:49:31.867573"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Melisa Rolfson"], ["created_at", "2014-12-03 03:49:31.869171"], ["description", "yeah awesome book"], ["price", 19], ["title", "eveniet"], ["updated_at", "2014-12-03 03:49:31.869171"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Dante Buckridge"], ["created_at", "2014-12-03 03:49:31.870898"], ["description", "yeah awesome book"], ["price", 19], ["title", "quis"], ["updated_at", "2014-12-03 03:49:31.870898"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Miss Florence Hand"], ["created_at", "2014-12-03 03:49:31.872645"], ["description", "yeah awesome book"], ["price", 13], ["title", "voluptatem"], ["updated_at", "2014-12-03 03:49:31.872645"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Otha Rogahn PhD"], ["created_at", "2014-12-03 03:49:31.874159"], ["description", "yeah awesome book"], ["price", 16], ["title", "eligendi"], ["updated_at", "2014-12-03 03:49:31.874159"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Mr. Casey D'Amore"], ["created_at", "2014-12-03 03:49:31.875596"], ["description", "yeah awesome book"], ["price", 20], ["title", "optio"], ["updated_at", "2014-12-03 03:49:31.875596"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Mauricio O'Keefe MD"], ["created_at", "2014-12-03 03:49:31.877094"], ["description", "yeah awesome book"], ["price", 12], ["title", "voluptatibus"], ["updated_at", "2014-12-03 03:49:31.877094"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Cecilia Hegmann Sr."], ["created_at", "2014-12-03 03:49:31.878680"], ["description", "yeah awesome book"], ["price", 14], ["title", "minus"], ["updated_at", "2014-12-03 03:49:31.878680"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Darion Gottlieb"], ["created_at", "2014-12-03 03:49:31.880212"], ["description", "yeah awesome book"], ["price", 14], ["title", "quasi"], ["updated_at", "2014-12-03 03:49:31.880212"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Chelsey Abbott"], ["created_at", "2014-12-03 03:49:31.881736"], ["description", "yeah awesome book"], ["price", 16], ["title", "aut"], ["updated_at", "2014-12-03 03:49:31.881736"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Gus Hessel I"], ["created_at", "2014-12-03 03:49:31.883305"], ["description", "yeah awesome book"], ["price", 17], ["title", "commodi"], ["updated_at", "2014-12-03 03:49:31.883305"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Lawson Hudson"], ["created_at", "2014-12-03 03:49:31.884848"], ["description", "yeah awesome book"], ["price", 20], ["title", "ea"], ["updated_at", "2014-12-03 03:49:31.884848"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Augustus Emmerich"], ["created_at", "2014-12-03 03:49:31.886382"], ["description", "yeah awesome book"], ["price", 12], ["title", "iure"], ["updated_at", "2014-12-03 03:49:31.886382"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Tianna Mraz PhD"], ["created_at", "2014-12-03 03:49:31.887922"], ["description", "yeah awesome book"], ["price", 10], ["title", "facere"], ["updated_at", "2014-12-03 03:49:31.887922"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Etha Feil"], ["created_at", "2014-12-03 03:49:31.889463"], ["description", "yeah awesome book"], ["price", 20], ["title", "voluptatem"], ["updated_at", "2014-12-03 03:49:31.889463"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Loyal White"], ["created_at", "2014-12-03 03:49:31.890956"], ["description", "yeah awesome book"], ["price", 19], ["title", "adipisci"], ["updated_at", "2014-12-03 03:49:31.890956"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Michaela Zieme Sr."], ["created_at", "2014-12-03 03:49:31.892507"], ["description", "yeah awesome book"], ["price", 11], ["title", "qui"], ["updated_at", "2014-12-03 03:49:31.892507"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Ari Kris"], ["created_at", "2014-12-03 03:49:31.894028"], ["description", "yeah awesome book"], ["price", 12], ["title", "aliquam"], ["updated_at", "2014-12-03 03:49:31.894028"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Miss Jaime Dickinson"], ["created_at", "2014-12-03 03:49:31.895567"], ["description", "yeah awesome book"], ["price", 10], ["title", "aperiam"], ["updated_at", "2014-12-03 03:49:31.895567"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["author", "Claudie Barrows III"], ["created_at", "2014-12-03 03:49:31.897146"], ["description", "yeah awesome book"], ["price", 14], ["title", "nulla"], ["updated_at", "2014-12-03 03:49:31.897146"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["author", "Maxwell Hand"], ["created_at", "2014-12-03 03:49:31.898645"], ["description", "yeah awesome book"], ["price", 20], ["title", "harum"], ["updated_at", "2014-12-03 03:49:31.898645"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m

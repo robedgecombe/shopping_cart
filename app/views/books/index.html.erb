@@ -1,0 +1,14 @@
+<h1>come buy some books</h1>
+
+<ul id="books">
+  <% @books.each do |book| %>
+  <li>
+        <strong><%= book.title.capitalize%>,</strong>
+        by <%=book.author %>.
+        <% simple_format(book.description) %>
+        this baby will set you back $<em><%= book.price %>
+    <br />
+        <%= link_to "Info", book_path(book) %>
+    </li>
+  <% end %>
+</ul>

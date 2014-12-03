@@ -1,0 +1,6 @@
+<h1><%= @book.title %></h1>
+<%= simple_format(@book.description) %>
+<%= simple_format(@book.author) %>
+<em><%= @book.price %></em>
+< /br>
+<%= link_to "List of Books on offer", books_path %>
